@@ -1,4 +1,4 @@
-t<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -14,9 +14,14 @@ t<!DOCTYPE html>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <script src="js/pankkikorttitiedot.js"></script>
+
+
   </head>
   <body>
-    <h1>Anna pankkikortti niin saat wishista ilmaisia hienoja jutuja ja menetat vain -100000$ Peukku</h1>
+    <div class="container">
+    <h1>olemme pankista ja haluamme tietosi (turvallinen)</h1>
 
 
 
@@ -26,10 +31,10 @@ t<!DOCTYPE html>
  <input type="text" class="form-control" id="name">
 </div>
 <div class="form-group">
-<label for="pin">Pin koodi:</label>
+<label for="pin">Kortti:</label>
 <input type="password" class="form-control" id="pin">
 </div>
-<button type="button" class="btn btn-info">lähetä (todella turvallinen https://)</button>
+<button onclick="laheta_pankkikorttitiedot();" type="button" class="btn btn-info">lähetä (todella turvallinen https://)</button>
 
 </form>
   </body>
