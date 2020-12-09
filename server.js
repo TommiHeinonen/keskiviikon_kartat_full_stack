@@ -3,7 +3,10 @@ console.log("Moikka moiii")
 const express = require('express')
 const app = express()
 //const port = 3000
-app.listen(3000, () => console.log ("kuuntelen"));
+//app.listen(3000, () => console.log ("kuuntelen"));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log("kuuntelen porttia " + port));
+
 app.use(express.static("public"));
 console.log("Serveri kaynissaaaaa!");
 
@@ -26,7 +29,14 @@ const paikkatiedot = [
      "Arvostelu": "Tavallaan koti",
      "Arvostelija": "Tomaatti"
 
-   }
+   },
+   {
+   "latitude": "61.4509",
+   "longitude": "23.8488",
+   "paikka": "Hervanta",
+   "Arvostelu": "valtaväylä ;D",
+   "Arvostelija": "Tomaatti"
+ }
 ]
 app.get('/haevierailut', function (req, res) {
   res.send(paikkatiedot)
